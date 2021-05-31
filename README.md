@@ -28,3 +28,9 @@ LZFSE.lzvn_compress compressed
 ```
 
 Each API takes a single string and returns a string.
+
+## License
+
+*lzfse.rb* is licensed under the MIT license.
+
+Apple's reference implementation of LZFSE is licensed under the 3-clause BSD license.
