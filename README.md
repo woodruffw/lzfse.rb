@@ -1,6 +1,8 @@
 lzfse.rb
 ========
 
+[![CI](https://github.com/woodruffw/lzfse.rb/actions/workflows/ci.yml/badge.svg)](https://github.com/woodruffw/lzfse.rb/actions/workflows/ci.yml)
+
 Ruby bindings for Apple's reference implementation of [LZFSE](https://github.com/lzfse/lzfse).
 
 Bindings are also provided for the internal LZVN APIs.
