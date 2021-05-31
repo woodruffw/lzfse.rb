@@ -1,7 +1,10 @@
 EXT_SRCS := ext/lzfse/ext.c ext/lzfse/ext.h
 
 .PHONY: all
-all: vendor/bundle
+all: compile
+
+.PHONY: compile
+compile: vendor/bundle
 	bundle exec rake compile
 
 .PHONY: lint
