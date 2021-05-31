@@ -2,6 +2,7 @@ lzfse.rb
 ========
 
 [![CI](https://github.com/woodruffw/lzfse.rb/actions/workflows/ci.yml/badge.svg)](https://github.com/woodruffw/lzfse.rb/actions/workflows/ci.yml)
+[![Gem Version](https://badge.fury.io/rb/lzfse.svg)](https://badge.fury.io/rb/lzfse)
 
 Ruby bindings for Apple's reference implementation of [LZFSE](https://github.com/lzfse/lzfse).
 
