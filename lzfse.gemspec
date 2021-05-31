@@ -5,8 +5,8 @@ require_relative "lib/lzfse/version"
 Gem::Specification.new do |s|
   s.name = "inih"
   s.version = LZFSE::VERSION
-  s.summary = "Ruby bindings for Apple's lzfse (+ lzvn)"
-  s.description = "Ruby bindings for Apple's lzfse (+ lzvn)"
+  s.summary = "Ruby bindings for Apple's LZFSE (+ LZVN)"
+  s.description = "Ruby bindings for Apple's LZFSE (+ LZVN)"
   s.authors = ["William Woodruff"]
   s.email = "william@yossarian.net"
   s.files = Dir["**/LICENSE", "README.md", ".yardopts", "lib/**/*.rb", "ext/**/*.{c,h}"]

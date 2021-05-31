@@ -7,6 +7,7 @@
 
 #include "lzfse.h"
 #include "lzfse_internal.h"
+#include "lzvn_decode_base.h"
 
 extern VALUE mLZFSE;
 

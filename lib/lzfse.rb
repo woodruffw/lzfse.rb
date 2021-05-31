@@ -13,10 +13,10 @@ module LZFSE
   end
 
   def lzvn_compress(string)
-
+    lzvn_encode_intern string
   end
 
   def lzvn_decompress(string)
-
+    lzvn_decode_intern string
   end
 end
