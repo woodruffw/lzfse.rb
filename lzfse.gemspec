@@ -13,9 +13,10 @@ Gem::Specification.new do |s|
   s.extensions << "ext/inih/extconf.rb"
   s.homepage = "https://github.com/woodruffw/lzfse.rb"
   s.license = "MIT"
+  s.required_ruby_version = ">= 2.7"
 
   s.add_development_dependency "minitest"
   s.add_development_dependency "rake-compiler"
-  s.add_development_dependency "redcarpet"
+  s.add_development_dependency "rubocop"
   s.add_development_dependency "yard"
 end

@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require_relative "lzfse/exceptions"
 require_relative "ext/lzfse"
 
+# The main module for *lzfse.rb*.
 module LZFSE
   module_function
 
