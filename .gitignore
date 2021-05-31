@@ -1,0 +1,8 @@
+ext/**/Makefile
+mkmf.log
+doc/
+.yardoc/
+*.gem
+tmp/
+vendor/
+lib/ext/

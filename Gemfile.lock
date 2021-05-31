@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    inih (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.4)
+    rake (13.0.3)
+    rake-compiler (1.1.1)
+      rake
+    redcarpet (3.5.1)
+    yard (0.9.26)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  inih!
+  minitest
+  rake-compiler
+  redcarpet
+  yard
+
+BUNDLED WITH
+   2.1.4
