@@ -6,3 +6,4 @@ doc/
 tmp/
 vendor/
 lib/ext/
+Gemfile.lock
