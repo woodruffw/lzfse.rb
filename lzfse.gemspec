@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.extensions << "ext/lzfse/extconf.rb"
   s.homepage = "https://github.com/woodruffw/lzfse.rb"
   s.license = "MIT"
-  s.required_ruby_version = ">= 2.7"
+  s.required_ruby_version = ">= 3.0"
 
   s.add_development_dependency "minitest"
   s.add_development_dependency "rake-compiler"
