@@ -25,6 +25,8 @@ jobs:
       - create-release
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: push to RubyGems
         run: |
           gem build lzfse.gemspec
