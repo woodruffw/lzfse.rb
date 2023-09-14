@@ -21,6 +21,8 @@ jobs:
   rubygems:
     name: publish to RubyGems
     runs-on: ubuntu-latest
+    needs:
+      - create-release
 
     steps:
       - name: push to RubyGems
