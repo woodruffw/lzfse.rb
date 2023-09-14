@@ -43,43 +43,22 @@ static VALUE mLZFSE_lzfse_decode_intern(VALUE self, VALUE input) {
   // from there.
   size_t output_len = input_len * 2;
   uint8_t *output_buf = malloc(output_len);
+  size_t bytes_written = 0;
 
-  // NOTE(ww): The public `lzfse_decode_buffer` API is a little bit braindead,
-  // so we use the "internal" `lzfse_decode` API instead. This requires
-  // us to set the decoder state up for ourselves.
-  void *scratch_buffer = malloc(lzfse_decode_scratch_size() + 1);
-  lzfse_decoder_state *state = (lzfse_decoder_state *)scratch_buffer;
-
-  // NOTE(ww): It would be nice if there was an allocate-on-demand API, but
-  // there isn't. So we do things the bad way.
   do {
-    // We have to update each of these fields with every try, to avoid
-    // mixing-and-matching decompression states between attempts.
-    memset(state, 0x00, sizeof(lzfse_decoder_state));
-    state->src = input_buf;
-    state->src_begin = input_buf;
-    state->src_end = input_buf + input_len;
-    state->dst = output_buf;
-    state->dst_begin = output_buf;
-    state->dst_end = output_buf + output_len;
+    bytes_written = lzfse_decode_buffer(output_buf, output_len, input_buf, input_len, NULL);
 
-    int status = lzfse_decode(state);
-    if (status == LZFSE_STATUS_OK) {
+    if (bytes_written < output_len) {
+      // Successful decode.
       break;
-    } else if (status == LZFSE_STATUS_DST_FULL) {
-      // Try again. There is almost certainly a better way of doing this
-      // that involves preserving the decoder state and reusing the partially
-      // decoded buffer, but this suffices for now.
+    } else {
+      // Try again with a bigger buffer.
       output_len *= 2;
       output_buf = realloc(output_buf, output_len);
-    } else {
-      rb_raise(cDecodeError, "internal error while decoding (%d)", status);
     }
   } while (true);
 
-  free(scratch_buffer);
-
-  VALUE output_str = rb_str_new((char *)output_buf, state->dst - output_buf);
+  VALUE output_str = rb_str_new((char *)output_buf, bytes_written);
   free(output_buf);
 
   return output_str;
