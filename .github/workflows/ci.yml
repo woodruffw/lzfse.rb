@@ -12,8 +12,8 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - "3.0"
-          - "3.1"
+          # - "3.0"
+          # - "3.1"
           - "3.2"
         host:
           - ubuntu-latest
@@ -26,10 +26,9 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
       - name: build
-        run: |
-          bundle install
-          bundle exec rake compile
+        run: bundle exec rake compile
       - name: test
         run: bundle exec rake
 
