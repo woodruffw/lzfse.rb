@@ -8,7 +8,6 @@ on:
 
 jobs:
   test:
-
     strategy:
       matrix:
         ruby:
@@ -29,6 +28,8 @@ jobs:
           bundler-cache: true
       - name: build
         run: bundle exec rake compile
+      - name: lint
+        run: bundle exec rubocop
       - name: test
         run: bundle exec rake
 
