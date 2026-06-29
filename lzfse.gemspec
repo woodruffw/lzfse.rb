@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.extensions << "ext/lzfse/extconf.rb"
   s.homepage = "https://github.com/woodruffw/lzfse.rb"
   s.license = "MIT"
-  s.required_ruby_version = ">= 3.0"
+  s.required_ruby_version = ">= 3.3"
   s.metadata["rubygems_mfa_required"] = "true"
 end
