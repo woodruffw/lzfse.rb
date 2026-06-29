@@ -13,7 +13,7 @@ jobs:
         ruby:
           - "3.3"
           - "3.4"
-          - "head"
+          - "4.0"
         host:
           - ubuntu-latest
           - macos-latest
