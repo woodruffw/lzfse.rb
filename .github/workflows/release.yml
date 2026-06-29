@@ -25,7 +25,7 @@ jobs:
       - create-release
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: push to RubyGems
         run: |
