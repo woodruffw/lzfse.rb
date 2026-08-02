@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem "minitest", "~> 5"
+gem "minitest", "~> 6"
 gem "rake-compiler", "~> 1.2"
 gem "rubocop", "~> 1.56"
 gem "rubocop-minitest", "~> 0.40.0", require: false
